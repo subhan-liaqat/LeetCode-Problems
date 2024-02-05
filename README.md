@@ -1,1 +1,1 @@
-This repository include all the LeetCode Problems which are more asked in big tech interviews
+This repository includes all the LeetCode Problems which are most asked in big tech interviews
