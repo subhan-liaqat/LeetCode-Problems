@@ -36,3 +36,12 @@ class Solution:
             if i in jewels:
                 count += 1
         return count
+
+
+# Approach 4
+class Solution:
+    def numJewelsInStones(self, jewels: str, stones: str) -> int:
+        counter = 0
+        for i in jewels:
+            counter += stones.count(i)
+        return counter
