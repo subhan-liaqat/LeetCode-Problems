@@ -26,3 +26,6 @@ class Solution:
                 if i == j:
                     count += 1
         return count
+
+        
+# Approach 3
