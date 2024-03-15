@@ -1,13 +1,21 @@
 class Solution:
     def isValid(self, s: str) -> bool:
-        brackets = {')': '(',  '}': '{', ']': '['}
-        pointer = 0
-        while 0 < pointer+1 < len(s):
-            if s[pointer+1] in brackets:
-                if s[pointer] != brackets[s[pointer+1]]:
-                    return False
-                s = s[:pointer] + s[pointer+2:]
-                pointer -= 1 if pointer > 0 else pointer
-                continue
-            pointer += 1
-        return not s
+        brackets = {
+            '(':')',
+            '{':'}',
+            '[':']'
+        }
+        stack = []
+
+        for i in s:
+
+            if i in brackets: # it's opening bracket
+                stack.append(i)
+
+            else: # it's closing bracket
+                if not stack: return False
+
+                b = stack.pop()
+                if i != brackets[b]: return False
+
+        return True if not stack else False               
