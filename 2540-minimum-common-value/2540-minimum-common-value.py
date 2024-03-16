@@ -1,3 +1,4 @@
+# Approach 1
 class Solution:
     def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
         i = 0
@@ -14,3 +15,14 @@ class Solution:
                 j += 1
         
         return common if common != float('inf') else -1
+
+
+# Approach 2
+class Solution:
+    def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
+        intersect = list(set(nums1) & set(nums2))
+
+        if intersect:
+            return sorted(intersect)[0]
+        else:
+            return -1
