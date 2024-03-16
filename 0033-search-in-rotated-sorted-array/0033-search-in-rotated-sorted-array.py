@@ -1,3 +1,4 @@
+# Approach 1
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         left = 0
@@ -21,4 +22,13 @@ class Solution:
                     left = mid + 1
                 else:
                     right = mid - 1
+        return -1
+
+
+# Approach 2
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        for i in range(len(nums)):
+            if target == nums[i]:
+                return i
         return -1
