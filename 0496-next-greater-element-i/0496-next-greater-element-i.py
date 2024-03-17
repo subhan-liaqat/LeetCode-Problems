@@ -1,3 +1,4 @@
+# Approach 1 - Optimal
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
 
@@ -14,3 +15,6 @@ class Solution:
         for i in range(len(nums1)):
             nums1[i] = ans[nums1[i]]
         return nums1
+
+
+# Approach 2
