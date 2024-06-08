@@ -9,7 +9,7 @@ class Solution:
 
             while value not in visited:
                 current_length += 1
-                visited.add(value) 
+                visited.add(value)
                 value = nums[value] # 2
 
             if max_lenght < current_length:
